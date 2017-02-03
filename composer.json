@@ -1,0 +1,20 @@
+{
+    "name": "innovalangues/lexicon-bundle",
+    "description" : "lexicon bundle",
+    "type" : "symfony3-bundle",
+    "authors" : [{
+			"name" : "Arnaud Bey",
+			"email" : "arnaud.bey@univ-grenoble-alpes.fr"
+		}
+	],
+    "keywords": ["Innovalangues", "Lexicon"],
+    "homepage": "http://github.com/InnovaLangues/LexiconBundle",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.1"
+    },
+    "autoload": {
+        "psr-0": { "Innova\\LexiconBundle": "" }
+    },
+    "target-dir": "Innova/LexiconBundle"
+}
