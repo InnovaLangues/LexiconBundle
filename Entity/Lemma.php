@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Lemma.
  *
  * @ORM\Table(name="lexicon.lemma")
- * @ORM\Entity(repositoryClass="Innova\LexiconBundle\Repository\Lexicon\LemmaRepository")
+ * @ORM\Entity(repositoryClass="Innova\LexiconBundle\Repository\LemmaRepository")
  */
 class Lemma
 {
@@ -29,7 +29,7 @@ class Lemma
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="string", length=255)
+     * @ORM\Column(name="content2", type="string", length=255)
      */
     private $content;
 

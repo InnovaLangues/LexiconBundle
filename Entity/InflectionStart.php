@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping\Index;
  *  @Index(columns={"start"}, flags={"fulltext"}),
  *  @Index(name="language_id", columns={"language"}),
  * })
- * @ORM\Entity(repositoryClass="Innova\LexiconBundle\Repository\Lexicon\InflectionStartRepository")
+ * @ORM\Entity(repositoryClass="Innova\LexiconBundle\Repository\InflectionStartRepository")
  */
 class InflectionStart
 {

@@ -12,7 +12,7 @@ use JsonSerializable;
  * @ORM\Table(name="lexicon.inflection", indexes={
  *  @Index(name="cleaned_content", columns={"cleaned_content"}),
  * })
- * @ORM\Entity(repositoryClass="Innova\LexiconBundle\Repository\Lexicon\InflectionRepository")
+ * @ORM\Entity(repositoryClass="Innova\LexiconBundle\Repository\InflectionRepository")
  */
 class Inflection implements JsonSerializable
 {
