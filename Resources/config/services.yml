@@ -1,4 +1,4 @@
 services:
-#    innova_lexicon.example:
-#        class: Innova\LexiconBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    innova_lexicon_inflection:
+        class: Innova\LexiconBundle\Manager\InflectionManager
+        arguments: ["@doctrine.orm.entity_manager"]
