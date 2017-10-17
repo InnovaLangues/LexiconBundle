@@ -5,8 +5,8 @@ namespace Innova\LexiconBundle\Command;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use MagicWordBundle\Entity\Lexicon\Lemma;
-use MagicWordBundle\Entity\Lexicon\Inflection;
+use Innova\LexiconBundle\Entity\Lemma;
+use Innova\LexiconBundle\Entity\Inflection;
 
 class EnglishImportCommand extends ContainerAwareCommand
 {
@@ -27,6 +27,10 @@ class EnglishImportCommand extends ContainerAwareCommand
             $lemma = $this->handleLemma($enForm, $output);
 
             if ($lemma) {
+                if (!$enForm['features']) {
+                    $inflection = $this->handleInflection(null, $lemma, $enForm['form'], $output);
+                }
+
                 preg_match_all('/:[^:]+/', $enForm['features'], $features);
                 foreach ($features as $feature) {
                     foreach ($feature as $f) {
@@ -76,8 +80,8 @@ class EnglishImportCommand extends ContainerAwareCommand
             'K' => 'participle',
             'I' => 'indicative',
             'G' => 'participle',
-            'C' => null,
-            'S' => null,
+            'C' => 'comparative',
+            'S' => 'superlative',
         );
 
         $gender = null;

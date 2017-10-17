@@ -84,6 +84,7 @@ class InflectionCommand extends ContainerAwareCommand
         $startRepo = $em->getRepository('InnovaLexiconBundle:InflectionStart');
         $letters = preg_split('//', $cleanedContent, -1, PREG_SPLIT_NO_EMPTY);
         $languageId = $language->getId();
+
         for ($i = 0; $i < count($letters); ++$i) {
             $substr = addslashes(substr($cleanedContent, 0, $i + 1));
             if (strlen($substr) > 1 && !$startRepo->search($substr, $languageId)) {
